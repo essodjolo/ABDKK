@@ -3,16 +3,19 @@ package com.c353.bicomat.services.implementations;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.c353.bicomat.entities.Banque;
 import com.c353.bicomat.repository.BanqueRepository;
 import com.c353.bicomat.services.interfaces.IBanqueService;
+
 
 /**
  * 
  * @author DINAH Aladji Jérémie
  *
  */
+@Service
 public class BanqueService implements IBanqueService{
 	
     /**

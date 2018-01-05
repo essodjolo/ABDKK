@@ -1,16 +1,18 @@
 package com.c353.bicomat.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class CompteBancaire {
 	
 	
 	@javax.persistence.Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
 	@Column
@@ -26,7 +28,7 @@ public class CompteBancaire {
 	private double tauxRenumeration;
 
     @ManyToOne
-    @JoinColumn( name = "id" )
+    @JoinColumn( name = "id_banque" )
     private Banque  banque;
     
 	public Long getId() {

@@ -1,13 +1,10 @@
 package com.c353.bicomat.entities;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+
 
 /**
  * 
@@ -19,7 +16,7 @@ import javax.persistence.OneToMany;
 public class Banque {
 	
 	@javax.persistence.Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
 	@Column
@@ -28,10 +25,7 @@ public class Banque {
 	@Column
 	private String adresse;
 
-	 @OneToMany
-	 @JoinColumn( name = "id" )
-	 private List<CompteBancaire>  comptebancaires;
-	    
+	
 
 	public Long getId() {
 		return id;
@@ -63,15 +57,6 @@ public class Banque {
 	}
 
 	
-
-	public List<CompteBancaire> getComptebancaires() {
-		return comptebancaires;
-	}
-
-
-	public void setComptebancaires(List<CompteBancaire> comptebancaires) {
-		this.comptebancaires = comptebancaires;
-	}
 
 
 	public Banque(Long id, String nom, String adresse) {
