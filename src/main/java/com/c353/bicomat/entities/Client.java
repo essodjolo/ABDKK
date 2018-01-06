@@ -108,6 +108,11 @@ public class Client {
 		super();
 		
 	}
+
+	public Client(String nomClient, Long idClient) {
+		this.nom = nomClient;
+		this.id = idClient;
+	}
 	
 	
 
