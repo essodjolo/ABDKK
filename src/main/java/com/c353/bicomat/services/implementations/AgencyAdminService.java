@@ -33,10 +33,4 @@ public class AgencyAdminService implements IAgencyAdminService {
 		return null;
 	}
 
-	@Override
-	public int nombreTotalComptesProvisoires() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }
