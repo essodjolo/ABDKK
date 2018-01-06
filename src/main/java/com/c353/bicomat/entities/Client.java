@@ -75,7 +75,7 @@ public class Client {
 		return typeClient;
 	}
 
-	public void setTypeClient(String nom) {
+	public void setTypeClient(String typeClient) {
 		this.typeClient = typeClient;
 	}
 
@@ -100,8 +100,8 @@ public class Client {
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.prenom = email;
-		this.prenom = typeClient;
+		this.email = email;
+		this.typeClient = typeClient;
 	}
 
 	public Client() {
