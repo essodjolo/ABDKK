@@ -12,6 +12,10 @@ import javax.persistence.GenerationType;
  *
  */
 
+/**
+ * @author Jérémie
+ *
+ */
 @Entity
 public class Banque {
 	
@@ -27,6 +31,9 @@ public class Banque {
 
 	
 
+	/**
+	 * @return
+	 */
 	public Long getId() {
 		return id;
 	}
