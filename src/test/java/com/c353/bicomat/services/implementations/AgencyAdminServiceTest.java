@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import com.c353.bicomat.entities.Client;
 import com.c353.bicomat.entities.CompteAgency;
-import com.c353.bicomat.services.interfaces.IAgencyAdminService;
+import com.c353.bicomat.services.IAgencyAdminService;
 
 /**
  * 

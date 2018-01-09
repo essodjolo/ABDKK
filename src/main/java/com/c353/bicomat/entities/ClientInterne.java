@@ -15,7 +15,9 @@ import java.util.Date;
  */
 
 @Entity
-public class ClientInterne extends Client {
+public class ClientInterne 
+//        extends Client
+{
 	
 	@javax.persistence.Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
