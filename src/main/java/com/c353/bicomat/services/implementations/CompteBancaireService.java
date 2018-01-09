@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.c353.bicomat.entities.Client;
 import com.c353.bicomat.entities.CompteBancaire;
 import com.c353.bicomat.repository.CompteBancaireRepository;
 import com.c353.bicomat.services.interfaces.ICompteBancaire;
@@ -47,10 +48,18 @@ public class CompteBancaireService implements ICompteBancaire{
 		return compteBancaireRepository.findOne(id);
 	}
 
-//	@Override
-//	public List<CompteBancaire> listerComptesBancairesClient(Client client) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+	@Override
+	public boolean existeCompteBancaire(CompteBancaire compteBancaire) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<CompteBancaire> listerComptesBancairesClient(Client client) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 
 }

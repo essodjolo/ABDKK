@@ -2,6 +2,7 @@ package com.c353.bicomat.services.interfaces;
 
 import java.util.List;
 
+import com.c353.bicomat.entities.Client;
 import com.c353.bicomat.entities.CompteBancaire;
 
 /**
@@ -23,6 +24,6 @@ public interface ICompteBancaire {
 	
 	public boolean existeCompteBancaire(CompteBancaire compteBancaire);
 	
-//	public List<CompteBancaire> listerComptesBancairesClient(Client client);
+    public List<CompteBancaire> listerComptesBancairesClient(Client client);
 
 }
