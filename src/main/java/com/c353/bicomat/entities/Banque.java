@@ -12,16 +12,12 @@ import javax.persistence.GenerationType;
  *
  */
 
-/**
- * @author Jérémie
- *
- */
 @Entity
 public class Banque {
 	
 	@javax.persistence.Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+	private Integer id;
 	
 	@Column
 	private String nom;
@@ -31,15 +27,12 @@ public class Banque {
 
 	
 
-	/**
-	 * @return
-	 */
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -66,7 +59,7 @@ public class Banque {
 	
 
 
-	public Banque(Long id, String nom, String adresse) {
+	public Banque(Integer id, String nom, String adresse) {
 		super();
 		this.id = id;
 		this.nom = nom;

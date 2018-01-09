@@ -9,6 +9,6 @@ import com.c353.bicomat.entities.Banque;
  * @author DINAH Aladji Jérémie
  *
  */
-public interface BanqueRepository extends JpaRepository<Banque, Long> {
+public interface BanqueRepository extends JpaRepository<Banque, Integer> {
 
 }
