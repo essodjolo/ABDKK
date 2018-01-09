@@ -19,6 +19,6 @@ public interface IBanqueService {
 
 	public List<Banque> findAllBanque();
 
-	public Banque getUneBanque(Integer id);
+	public Banque getUneBanque(Interger id);
 
 }
