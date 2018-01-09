@@ -1,4 +1,4 @@
-package com.c353.bicomat.web.base.selecteur;
+package tg.rodrigue.promoplus.web.page.base.selecteur;
 
 import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
 import org.apache.wicket.model.Model;
