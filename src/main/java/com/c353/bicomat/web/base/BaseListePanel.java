@@ -27,7 +27,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  *
- * @author RODRIGUE
+ * @author 
  */
 public abstract class BaseListePanel<T, PK extends java.io.Serializable> extends Panel {
 

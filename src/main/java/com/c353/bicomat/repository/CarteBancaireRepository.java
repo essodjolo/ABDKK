@@ -9,6 +9,6 @@ import com.c353.bicomat.entities.CarteBancaire;
  * @author KAHANAM Essodjolo
  *
  */
-public interface CarteBancaireRepository extends JpaRepository<CarteBancaire, Long> {
+public interface CarteBancaireRepository extends JpaRepository<CarteBancaire, Integer> {
 
 }

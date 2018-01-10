@@ -43,16 +43,22 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a wicket:id="banque">Banque</a></li>
-                            <li><a href="productionpage.html">Clients</a></li>
+                            <li class="active"><a wicket:id="banque">Banques</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Comptes Agency<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Comptes Bancaire<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="zonepage.html">Créer</a></li>
-                                    <li><a href="zonepage.html">Link4</a></li>
-                                    <li><a href="produitpage.html">Link5</a></li>
+                                    <li><a href="zonepage.html">Compte épargne</a></li>
+                                    <li><a href="zonepage.html">Compte courant</a></li>
                                 </ul>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clients<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="zonepage.html">Internes</a></li>
+                                    <li><a href="zonepage.html">Externes</a></li>
+                                </ul>
+                            </li>
+                            <li><a >Agency</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                     <!-- Navbar Right Menu -->
@@ -65,10 +71,9 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <!-- The user image in the navbar-->
                                     <wicket:link>
-                                        <img src="img/no_picture.png" class="user-image" alt="User Image">
                                     </wicket:link>
                                     <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                    <span class="hidden-xs">Essodjolo KAHANAM</span>
+                                    <span class="hidden-xs">Le Conseiller</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- The user image in the menu -->
