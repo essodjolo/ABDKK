@@ -9,6 +9,6 @@ import com.c353.bicomat.entities.Conseiller;
  * @author BOKOBOSSO Eyapene
  *
  */
-public interface ConseillerRepository extends JpaRepository<Conseiller, Long> {
+public interface ConseillerRepository extends JpaRepository<Conseiller, Integer> {
 
 }
