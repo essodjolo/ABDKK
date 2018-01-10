@@ -2,8 +2,8 @@ package com.c353.bicomat.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.util.Date;
@@ -19,9 +19,9 @@ public class ClientInterne
 //        extends Client
 {
 	
-	//@javax.persistence.Id
-	//@GeneratedValue(strategy=GenerationType.AUTO)
-	//private Long id;
+	@javax.persistence.Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
 	
 	@Column
 	private Date anneeArrivee;
@@ -40,9 +40,9 @@ public class ClientInterne
     private Client client;
 	
 	
-	//public Long getId() {
-		//return id;
-	//}
+	public Long getId() {
+		return id;
+	}
 
 	public Date getAnneeArrivee() {
 		return anneeArrivee;
@@ -84,9 +84,9 @@ public class ClientInterne
 		this.client = client;
 	}
 	
-	public ClientInterne(/*Long id,*/ Date anneeArrivee, String numeroContrat, Boolean agency, String numeroPortable) {
+	public ClientInterne(Long id, Date anneeArrivee, String numeroContrat, Boolean agency, String numeroPortable) {
 		super();
-		//this.id = id;
+		this.id = id;
 		this.anneeArrivee = anneeArrivee;
 		this.numeroContrat = numeroContrat;
 		this.agency = agency;

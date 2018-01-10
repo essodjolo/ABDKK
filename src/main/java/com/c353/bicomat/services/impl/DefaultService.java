@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
- * @author Fabrice
+ * @author 
  * @param <T>
  * @param <PK>
  */
