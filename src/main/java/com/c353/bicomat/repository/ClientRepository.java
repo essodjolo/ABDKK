@@ -9,6 +9,6 @@ import com.c353.bicomat.entities.Client;
  * @author KAHANAM Essodjolo
  *
  */
-public interface ClientRepository extends JpaRepository<Client, Long> {
+public interface ClientRepository extends JpaRepository<Client, Integer> {
 
 }
