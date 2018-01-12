@@ -1,11 +1,13 @@
 package com.c353.bicomat.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class CompteAgency {
 	
 	@javax.persistence.Id
