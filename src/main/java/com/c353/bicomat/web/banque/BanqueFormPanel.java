@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.c353.bicomat.web.banque;
 
 import com.c353.bicomat.entities.Banque;
@@ -13,10 +8,7 @@ import org.apache.wicket.markup.html.form.HiddenField;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
-/**
- *
- * @author RODRIGUE
- */
+
 public class BanqueFormPanel extends BaseFormPanel<Banque, Integer> {
 
     @SpringBean

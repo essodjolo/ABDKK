@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.c353.bicomat.web.banque;
 
-import com.c353.bicomat.entities.Banque;
-import com.c353.bicomat.services.IBanqueService;
+package com.c353.bicomat.web.compteAgency;
+
+import com.c353.bicomat.entities.CompteAgency;
+import com.c353.bicomat.services.ICompteAgencyService;
 import com.c353.bicomat.services.IService;
 import com.c353.bicomat.web.base.BaseListePanel;
 import java.util.List;
@@ -24,33 +20,33 @@ import org.apache.wicket.model.IModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 
-public class BanqueListPanel extends BaseListePanel<Banque, Integer> {
+public class CompteAgencyListPanel extends BaseListePanel<CompteAgency, Integer> {
 
     @SpringBean
-    private IBanqueService banqueService;
+    private ICompteAgencyService compteAgencyService;
 
-    public BanqueListPanel(String id) {
+    public CompteAgencyListPanel(String id) {
         super(id);
     }
 
     @Override
-    protected void addFormComponents(Form<Banque> form) {
+    protected void addFormComponents(Form<CompteAgency> form) {
     }
 
     @Override
     protected List getColumns(List columns) {
         columns.add(new PropertyColumn<>(
-                Model.of(getString("table.nom")), "nom"));
+                Model.of(getString("table.login")), "login"));
         columns.add(new PropertyColumn<>(
-                Model.of(getString("table.adresse")), "adresse"));
+                Model.of(getString("table.motDePasse")), "motDePasse"));
         return columns;
     }
 
     @Override
-    protected void getColumnsAction(List<IColumn<Banque, Sort>> columns) {
-        columns.add(new AbstractColumn<Banque, Sort>(Model.of(getString("table.actions"))) {
+    protected void getColumnsAction(List<IColumn<CompteAgency, Sort>> columns) {
+        columns.add(new AbstractColumn<CompteAgency, Sort>(Model.of(getString("table.actions"))) {
             @Override
-            public void populateItem(Item<ICellPopulator<Banque>> cellItem, String componentId, IModel<Banque> rowModel) {
+            public void populateItem(Item<ICellPopulator<CompteAgency>> cellItem, String componentId, IModel<CompteAgency> rowModel) {
                 cellItem.add(new ActionPanel(componentId, getResponsePageClass(),
                         getId(rowModel.getObject())));
             }
@@ -65,18 +61,18 @@ public class BanqueListPanel extends BaseListePanel<Banque, Integer> {
                     new PageParameters().add("id", modelId).add("action", "edit")));
             add(new BookmarkablePageLink("supprimer", getResponsePageClass(),
                     new PageParameters().add("id", modelId).add("action", "delete")));
-            add(new BookmarkablePageLink("activerDesactiver", BanquePage.class,
-                    new PageParameters().add("idBanque", modelId)));
+            add(new BookmarkablePageLink("activerDesactiver", CompteAgencyPage.class,
+                    new PageParameters().add("idCompteAgency", modelId)));
         }
     }
 
     @Override
     protected IService getService() {
-        return banqueService;
+        return compteAgencyService;
     }
 
     @Override
-    protected String getId(Banque t) {
+    protected String getId(CompteAgency t) {
         try {
             return t.getId().toString();
         } catch (Exception e) {
@@ -86,7 +82,7 @@ public class BanqueListPanel extends BaseListePanel<Banque, Integer> {
 
     @Override
     protected Class getResponsePageClass() {
-        return BanquePage.class;
+        return CompteAgencyPage.class;
     }
 
 }
