@@ -1,19 +1,19 @@
 package com.c353.bicomat.web.banque;
 
-import com.c353.bicomat.entities.Banque;
-import com.c353.bicomat.services.IBanqueService;
+import com.c353.bicomat.entities.banque.Banque;
 import com.c353.bicomat.web.base.BasePage;
 import org.wicketstuff.annotation.mount.MountPath;
 
 import java.util.Optional;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
+import com.c353.bicomat.services.common.banque.IBanqueDefaultService;
 
 @MountPath("banques")
 public class BanquePage extends BasePage {
 
     @SpringBean
-    private IBanqueService banqueService;
+    private IBanqueDefaultService banqueService;
 
     public BanquePage() {
         this(null);

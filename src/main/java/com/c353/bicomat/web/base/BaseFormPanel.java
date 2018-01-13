@@ -5,7 +5,7 @@
  */
 package com.c353.bicomat.web.base;
 
-import com.c353.bicomat.services.IService;
+import com.c353.bicomat.services.common.IService;
 import com.c353.bicomat.web.html.panel.FeedbackPanel;
 import java.io.Serializable;
 import java.util.Map;

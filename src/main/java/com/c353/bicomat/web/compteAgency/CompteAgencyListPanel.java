@@ -1,9 +1,8 @@
 
 package com.c353.bicomat.web.compteAgency;
 
-import com.c353.bicomat.entities.CompteAgency;
-import com.c353.bicomat.services.ICompteAgencyService;
-import com.c353.bicomat.services.IService;
+import com.c353.bicomat.entities.agency.CompteAgency;
+import com.c353.bicomat.services.common.IService;
 import com.c353.bicomat.web.base.BaseListePanel;
 import java.util.List;
 import org.apache.wicket.extensions.markup.html.repeater.data.grid.ICellPopulator;
@@ -18,12 +17,13 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.markup.repeater.Item;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
+import com.c353.bicomat.services.common.agency.ICompteAgencyDefaultService;
 
 
 public class CompteAgencyListPanel extends BaseListePanel<CompteAgency, Integer> {
 
     @SpringBean
-    private ICompteAgencyService compteAgencyService;
+    private ICompteAgencyDefaultService compteAgencyService;
 
     public CompteAgencyListPanel(String id) {
         super(id);

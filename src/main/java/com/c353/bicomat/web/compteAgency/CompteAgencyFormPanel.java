@@ -5,20 +5,20 @@
  */
 package com.c353.bicomat.web.compteAgency;
 
-import com.c353.bicomat.entities.CompteAgency;
-import com.c353.bicomat.services.ICompteAgencyService;
-import com.c353.bicomat.services.IService;
+import com.c353.bicomat.entities.agency.CompteAgency;
+import com.c353.bicomat.services.common.IService;
 import com.c353.bicomat.web.base.BaseFormPanel;
 import org.apache.wicket.markup.html.form.HiddenField;
 import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.spring.injection.annot.SpringBean;
+import com.c353.bicomat.services.common.agency.ICompteAgencyDefaultService;
 
 
 public class CompteAgencyFormPanel extends BaseFormPanel<CompteAgency, Integer> {
 
     @SpringBean
-    private ICompteAgencyService compteAgencyService;
+    private ICompteAgencyDefaultService compteAgencyService;
 
     public CompteAgencyFormPanel(String id) {
         super(id);

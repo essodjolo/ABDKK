@@ -1,6 +1,6 @@
 package com.c353.bicomat.web.base.selecteur;
 
-import com.c353.bicomat.services.IService;
+import com.c353.bicomat.services.common.IService;
 import com.c353.bicomat.web.html.table.provider.CRUDDataProvider;
 import java.util.LinkedList;
 import java.util.List;

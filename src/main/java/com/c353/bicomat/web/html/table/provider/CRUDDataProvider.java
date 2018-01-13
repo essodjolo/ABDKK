@@ -4,7 +4,7 @@
  */
 package com.c353.bicomat.web.html.table.provider;
 
-import com.c353.bicomat.services.IService;
+import com.c353.bicomat.services.common.IService;
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;

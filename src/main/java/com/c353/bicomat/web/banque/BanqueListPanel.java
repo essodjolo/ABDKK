@@ -5,9 +5,8 @@
  */
 package com.c353.bicomat.web.banque;
 
-import com.c353.bicomat.entities.Banque;
-import com.c353.bicomat.services.IBanqueService;
-import com.c353.bicomat.services.IService;
+import com.c353.bicomat.entities.banque.Banque;
+import com.c353.bicomat.services.common.IService;
 import com.c353.bicomat.web.base.BaseListePanel;
 import java.util.List;
 import org.apache.wicket.extensions.markup.html.repeater.data.grid.ICellPopulator;
@@ -22,12 +21,13 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.markup.repeater.Item;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
+import com.c353.bicomat.services.common.banque.IBanqueDefaultService;
 
 
 public class BanqueListPanel extends BaseListePanel<Banque, Integer> {
 
     @SpringBean
-    private IBanqueService banqueService;
+    private IBanqueDefaultService banqueService;
 
     public BanqueListPanel(String id) {
         super(id);

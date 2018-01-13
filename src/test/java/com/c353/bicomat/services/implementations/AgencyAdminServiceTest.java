@@ -6,9 +6,9 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-import com.c353.bicomat.entities.Client;
-import com.c353.bicomat.entities.CompteAgency;
-import com.c353.bicomat.services.IAgencyAdminService;
+import com.c353.bicomat.entities.banque.Client;
+import com.c353.bicomat.entities.agency.CompteAgency;
+import com.c353.bicomat.services.agency.api.IAgencyAdminService;
 
 /**
  * 

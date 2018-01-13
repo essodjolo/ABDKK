@@ -1,18 +1,18 @@
 package com.c353.bicomat.web.banque;
 
-import com.c353.bicomat.entities.Banque;
-import com.c353.bicomat.services.IBanqueService;
-import com.c353.bicomat.services.IService;
+import com.c353.bicomat.entities.banque.Banque;
+import com.c353.bicomat.services.common.IService;
 import com.c353.bicomat.web.base.BaseFormPanel;
 import org.apache.wicket.markup.html.form.HiddenField;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.spring.injection.annot.SpringBean;
+import com.c353.bicomat.services.common.banque.IBanqueDefaultService;
 
 
 public class BanqueFormPanel extends BaseFormPanel<Banque, Integer> {
 
     @SpringBean
-    private IBanqueService banqueService;
+    private IBanqueDefaultService banqueService;
 
     public BanqueFormPanel(String id) {
         super(id);
