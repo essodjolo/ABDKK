@@ -1,16 +1,14 @@
 package com.c353.bicomat.entities.banque;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -44,15 +42,25 @@ public class Client implements Serializable {
     @Column(insertable = false, updatable = false)
     private String typeClient;
 
-    @ManyToOne
-    @JoinColumn(name = "id_compte_bancaire")
-    private CompteBancaire compteBancaire;
+    @OneToMany
+    private List<CompteBancaire> comptesBancaires;
 
-    @ManyToOne
-    @JoinColumn(name = "id_carte_bancaire")
-    private CarteBancaire carteBancaire;
+    public String getNumeroCompte() {
+        return numeroCompte;
+    }
 
-    
+    public void setNumeroCompte(String numeroCompte) {
+        this.numeroCompte = numeroCompte;
+    }
+
+    public List<CompteBancaire> getComptesBancaires() {
+        return comptesBancaires;
+    }
+
+    public void setComptesBancaires(List<CompteBancaire> comptesBancaires) {
+        this.comptesBancaires = comptesBancaires;
+    }
+
     public Long getIdClient() {
         return idClient;
     }
@@ -87,22 +95,6 @@ public class Client implements Serializable {
 
     public void setTypeClient(String typeClient) {
         this.typeClient = typeClient;
-    }
-
-    public CompteBancaire getCompteBancaire() {
-        return compteBancaire;
-    }
-
-    public void setCompteBancaire(CompteBancaire compteBancaire) {
-        this.compteBancaire = compteBancaire;
-    }
-
-    public CarteBancaire getCarteBancaire() {
-        return carteBancaire;
-    }
-
-    public void setCompteBancaire(CarteBancaire carteBancaire) {
-        this.carteBancaire = carteBancaire;
     }
 
     public Client(Long idClient, String nom, String prenom, String email, String typeClient) {

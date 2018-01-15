@@ -5,10 +5,16 @@
  */
 package com.c353.bicomat.services.agency.api;
 
+import com.c353.bicomat.entities.agency.CompteAgency;
+
 /**
  *
  * @author k.atsou
  */
 public interface IAgencyControleAcces {
+    
+    void annulerAccesAgency(CompteAgency compteAgency);
+    
+    Boolean connexionAgency(String login, String motDePasse);
     
 }
