@@ -1,5 +1,6 @@
 package com.c353.bicomat.entities.banque;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,11 +13,11 @@ import javax.persistence.GenerationType;
  *
  */
 @Entity
-public class Banque {
+public class Banque implements Serializable {
 
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer idBanque;
 
     @Column
     private String nom;
@@ -24,12 +25,12 @@ public class Banque {
     @Column
     private String adresse;
 
-    public Integer getId() {
-        return id;
+    public Integer getIdBanque() {
+        return idBanque;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdBanque(Integer idBanque) {
+        this.idBanque = idBanque;
     }
 
     public String getNom() {
@@ -48,9 +49,9 @@ public class Banque {
         this.adresse = adresse;
     }
 
-    public Banque(Integer id, String nom, String adresse) {
+    public Banque(Integer idBanque, String nom, String adresse) {
         super();
-        this.id = id;
+        this.idBanque = idBanque;
         this.nom = nom;
         this.adresse = adresse;
     }

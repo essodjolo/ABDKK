@@ -9,11 +9,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class CompteAgency {
+public class CompteAgency extends ClientInterne {
 	
-	@javax.persistence.Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer id;
+//	@javax.persistence.Id
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+//	private Integer id;
 	
 	@Column
 	private String login;
@@ -27,22 +27,22 @@ public class CompteAgency {
 	@Column
 	private String reponseQuestionSecrete;
 	
-	@ManyToOne
-    @JoinColumn( name = "id_client_interne" )
-    private ClientInterne clientInterne;
+//	@ManyToOne
+//    @JoinColumn( name = "id_client_interne" )
+//    private ClientInterne clientInterne;
     
-	public Integer getId() {
-		return id;
-	}
+//	public Integer getId() {
+//		return id;
+//	}
 	
 
-	public ClientInterne getClientInterne() {
-		return clientInterne;
-	}
-
-	public void setClientInterne(ClientInterne clientInterne) {
-		this.clientInterne = clientInterne;
-	}
+//	public ClientInterne getClientInterne() {
+//		return clientInterne;
+//	}
+//
+//	public void setClientInterne(ClientInterne clientInterne) {
+//		this.clientInterne = clientInterne;
+//	}
 
 	public String getLogin() {
 		return login;
@@ -79,7 +79,7 @@ public class CompteAgency {
 
 	public CompteAgency(Integer id, String login, String motDePasse, String questionSecrete, String reponseQuestionSecrete) {
 		super();
-		this.id = id;
+		//this.id = id;
 		this.setLogin(login);
 		this.setMotDePasse(motDePasse);
 		this.setQuestionSecrete(questionSecrete);
@@ -91,10 +91,9 @@ public class CompteAgency {
 		
 	}
 
-	public CompteAgency(String login, String motDePasse, Integer id) {
+	public CompteAgency(String login, String motDePasse) {
 		super();
 		this.setLogin(login);
 		this.setMotDePasse(motDePasse);
-		this.id = id;
 	}
 }

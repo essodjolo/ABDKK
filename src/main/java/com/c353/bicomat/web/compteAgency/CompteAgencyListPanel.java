@@ -74,7 +74,7 @@ public class CompteAgencyListPanel extends BaseListePanel<CompteAgency, Integer>
     @Override
     protected String getId(CompteAgency t) {
         try {
-            return t.getId().toString();
+            return t.getIdClient().toString();
         } catch (Exception e) {
             return null;
         }

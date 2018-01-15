@@ -78,7 +78,7 @@ public class BanqueListPanel extends BaseListePanel<Banque, Integer> {
     @Override
     protected String getId(Banque t) {
         try {
-            return t.getId().toString();
+            return t.getIdBanque().toString();
         } catch (Exception e) {
             return null;
         }

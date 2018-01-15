@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
@@ -14,11 +16,12 @@ import javax.persistence.ManyToOne;
  */
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Conseiller {
 	
 	@javax.persistence.Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+	private Long idConseiller;
 	
 	@Column
 	private String nom;
@@ -34,8 +37,8 @@ public class Conseiller {
     //@JoinColumn( name = "id_conseillerLogin" )
     //private ConseillerLogin conseillerLogin;
     
-	public Long getId() {
-		return id;
+	public Long getIdConseiller() {
+		return idConseiller;
 	}
 
 	public String getNom() {
@@ -72,7 +75,7 @@ public class Conseiller {
 	
 	public Conseiller(Long id, String nom, String prenom) {
 		super();
-		this.id = id;
+		this.idConseiller = id;
 		this.nom = nom;
 		this.prenom = prenom;
 	}
@@ -84,7 +87,7 @@ public class Conseiller {
 
 	public Conseiller(String nomConseiller, Long idConseiller) {
 		this.nom = nomConseiller;
-		this.id = idConseiller;
+		this.idConseiller = idConseiller;
 	}
 	
 	

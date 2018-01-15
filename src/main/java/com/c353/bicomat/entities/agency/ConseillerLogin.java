@@ -15,12 +15,12 @@ import javax.persistence.ManyToOne;
  */
 
 @Entity
-public class ConseillerLogin {
+public class ConseillerLogin extends Conseiller {
 //extends Conseiller {
 	
-	@javax.persistence.Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+//	@javax.persistence.Id
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+//	private Long id;
 	
 	@Column
 	private String login;
@@ -28,14 +28,14 @@ public class ConseillerLogin {
 	@Column
 	private String motDePasse;
 		
-	@ManyToOne
-    @JoinColumn( name = "id_conseiller" )
-    private Conseiller conseiller;
+//	@ManyToOne
+//    @JoinColumn( name = "id_conseiller" )
+//    private Conseiller conseiller;
 	
 	
-	public Long getId() {
-		return id;
-	}
+//	public Long getId() {
+//		return id;
+//	}
 
 	public String getLogin() {
 		return login;
@@ -53,17 +53,17 @@ public class ConseillerLogin {
 		this.motDePasse = motDePasse;
 	}
 
-	public Conseiller getConseiller() {
-		return conseiller;
-	}
+//	public Conseiller getConseiller() {
+//		return conseiller;
+//	}
 
-	public void setConseiller(Conseiller conseiller) {
-		this.conseiller = conseiller;
-	}
+//	public void setConseiller(Conseiller conseiller) {
+//		this.conseiller = conseiller;
+//	}
 	
 	public ConseillerLogin(Long id, String login, String motDePasse) {
 		super();
-		this.id = id;
+		//this.id = id;
 		this.login = login;
 		this.motDePasse = motDePasse;
 	}

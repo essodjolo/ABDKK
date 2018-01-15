@@ -24,7 +24,7 @@ public class BanqueFormPanel extends BaseFormPanel<Banque, Integer> {
 
     @Override
     protected void addComponents(EditForm editForm) {
-        editForm.add(new HiddenField("id"));
+        editForm.add(new HiddenField("idBanque"));
         editForm.add(new TextField("nom").setRequired(true));
         editForm.add(new TextField("adresse"));
     }
@@ -51,7 +51,7 @@ public class BanqueFormPanel extends BaseFormPanel<Banque, Integer> {
     @Override
     protected String getId(Banque t) {
         try {
-            return t.getId().toString();
+            return t.getIdBanque().toString();
         } catch (Exception e) {
             return null;
         }

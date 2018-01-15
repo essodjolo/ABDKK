@@ -30,7 +30,7 @@ public class CompteAgencyFormPanel extends BaseFormPanel<CompteAgency, Integer> 
 
     @Override
     protected void addComponents(EditForm editForm) {
-        editForm.add(new HiddenField("id"));
+        editForm.add(new HiddenField("idClient"));
         editForm.add(new TextField("login").setRequired(true));
         editForm.add(new PasswordTextField("motDePasse").setRequired(true));
     }
@@ -57,7 +57,7 @@ public class CompteAgencyFormPanel extends BaseFormPanel<CompteAgency, Integer> 
     @Override
     protected String getId(CompteAgency cpt) {
         try {
-            return cpt.getId().toString();
+            return cpt.getIdClient().toString();
         } catch (Exception e) {
             return null;
         }

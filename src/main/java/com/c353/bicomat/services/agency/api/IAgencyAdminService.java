@@ -15,8 +15,8 @@ import com.c353.bicomat.entities.agency.CompteAgency;
 public interface IAgencyAdminService {
 	
 	void creerCompteAgencyProvisoire(Client client, 
-									String questionSecrete, 
-									String reponseQuestionSecrete);
+                                        String questionSecrete, 
+                                        String reponseQuestionSecrete);
 	
 	void validerCompteAgencyProvisoire(CompteAgency clientInterneAgency);
 	
